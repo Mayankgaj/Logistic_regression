@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Women Affairs Prediction</title>
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css')}}">
+   </head>
+
+   <body>
+
+    <div class="main">
+
+        <div class="header">
+            <img src="{{ url_for('static', filename = 'images/dots.png')}}" alt="">
+            <h1>WOMEN AFFAIRS PREDECTION</h1>
+            <img src="{{ url_for('static', filename = 'images/dots.png')}}" alt="">
+        </div>
+        <h2>Project by Mayank G
+        	<div class="contact-details" >
+				<a href="https://github.com/Mayankgaj" rel="noopener noreferrer"
+					target="_blank"
+				>
+					<img src="{{ url_for('static',filename='images/Github.png') }}" />
+				</a>
+                <a href="www.linkedin.com/in/mayank-gajbhiye-06b959204" rel="noopener noreferrer"
+                   target="_blank"
+				>
+					<img src="{{ url_for('static',filename='images/linkedin.png') }}" />
+				</a>
+			</div>
+        </h2>>
+        <div class="container">
+            <h3>Women Affairs Prediction </h3>
+            <form action="{{ url_for('predict')}}" onsubmit="return validateForm()" id="booking-form" class="booking-form" method="POST">
+                <div class="form-group">
+                    <div class="form-Rate Marriage">
+                        <label for="Rate Marriage">Rate Marriage</label>
+                        <input type="number" id="Rate Marriage" name="Rate Marriage" placeholder="Rate Marriage" />
+                    </div>
+                    <div class="form-Age">
+                        <label for="Age">Age</label>
+                        <input type="number" id="Age" name="Age" placeholder="Age" />
+                    </div>
+                    <div class="form-Years Married">
+                        <label for="Years Married">Years Married</label>
+                        <input type="number" id="Years Married" name="Years Married" placeholder="Years Married" />
+                    </div>
+                    <div class="form-Children">
+                        <label for="Children">Children</label>
+                        <input type="number" id="Children" name="Children" placeholder="Children" />
+                    </div>
+                    <div class="form-Religious">
+                        <label for="Religious">Religious</label>
+                        <input type="number" id="Religious" name="Religious" placeholder="Religious" />
+                    </div>
+                    <div class="form-Education">
+                        <label for="Education">Education</label>
+                        <input type="number" id="Education" name="Education" placeholder="Education" />
+                    </div>
+                    <div class="form-Occupation">
+                        <label for="AGE">Occupation</label>
+                        <input type="number" id="Occupation" name="Occupation" placeholder="Occupation" />
+                    </div>
+                    <div class="form-Occupation Husband">
+                        <label for="Occupation Husband">Occupation Husb</label>
+                        <input type="number" id="Occupation Husband" name="Occupation Husband" placeholder="Occupation Husband" />
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" id="submit" class="submit" value="Predict" />
+                    </div>
+                </div>
+                          {{prediction_text1}}
+            </form>
+        </div>
+    </div>
+   </body>
+</html>
