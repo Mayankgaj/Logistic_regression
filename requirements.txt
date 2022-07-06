@@ -1,0 +1,7 @@
+flask
+numpy
+pandas
+pymongo
+gunicorn
+pymongo[srv]
+scikit-learn==1.0.2
